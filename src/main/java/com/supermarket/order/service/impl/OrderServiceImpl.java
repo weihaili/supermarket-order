@@ -14,6 +14,7 @@ import com.supermarket.mapper.TbOrderItemMapper;
 import com.supermarket.mapper.TbOrderMapper;
 import com.supermarket.mapper.TbOrderShippingMapper;
 import com.supermarket.order.dao.JedisClient;
+import com.supermarket.order.pojo.OderState;
 import com.supermarket.order.service.OrderService;
 import com.supermarket.order.util.OrderStatus;
 import com.supermarket.pojo.TbOrder;
@@ -89,5 +90,48 @@ public class OrderServiceImpl implements OrderService {
 		
 		return KklResult.ok(orderIdStr);
 	}
+
+	/**   
+	 * <p>Title: getOrderInfoByOrderId</p>   
+	 * <p>Description: get order information by order id</p>   
+	 * @param orderId
+	 * @return   
+	 * @see com.supermarket.order.service.OrderService#getOrderInfoByOrderId(java.lang.String)   
+	 */ 
+	@Override
+	public KklResult getOrderInfoByOrderId(String orderId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**   
+	 * <p>Title: getOderListByUserId</p>   
+	 * <p>Description: get order list by user id</p>   
+	 * @param userId
+	 * @param page
+	 * @param count
+	 * @return   
+	 * @see com.supermarket.order.service.OrderService#getOderListByUserId(java.lang.Long, java.lang.Integer, java.lang.Integer)   
+	 */ 
+	@Override
+	public KklResult getOderListByUserId(Long userId, Integer page, Integer count) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**   
+	 * <p>Title: updateOrderStatus</p>   
+	 * <p>Description: update order status by order id</p>   
+	 * @param state
+	 * @return   
+	 * @see com.supermarket.order.service.OrderService#updateOrderStatus(com.supermarket.order.pojo.OderState)   
+	 */ 
+	@Override
+	public KklResult updateOrderStatus(OderState state) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
 
 }
