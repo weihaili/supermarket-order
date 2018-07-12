@@ -47,7 +47,7 @@ public class OrderController {
 		return result;
 	}
 	
-	@RequestMapping("/{userID}/{page}/{count}")
+	@RequestMapping("/list/{userId}/{page}/{count}")
 	@ResponseBody
 	public KklResult getOderListByUserId(@PathVariable Long userId,@PathVariable Integer page,@PathVariable Integer count ) {
 		KklResult result= orderService.getOderListByUserId(userId,page,count);
@@ -64,7 +64,7 @@ public class OrderController {
 	 */ 
 	@RequestMapping(value="/changeStatus",method=RequestMethod.POST)
 	@ResponseBody
-	public KklResult updateOrderStateByOrderId(OderState state) {
+	public KklResult updateOrderStateByOrderId(@RequestBody OderState state) {
 		KklResult result = orderService.updateOrderStatus(state);
 		return result;
 	}
